@@ -70,7 +70,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.25903751172326861" green="0.45918597268708639" blue="0.51726989565353532" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="45W-HL-Nuf" detailTextLabel="TaU-fo-v9t" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="eSB-Q7-ZPR">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="45W-HL-Nuf" detailTextLabel="TaU-fo-v9t" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="eSB-Q7-ZPR">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSB-Q7-ZPR" id="aoz-RG-b9V">
                                             <autoresizingMask key="autoresizingMask"/>
