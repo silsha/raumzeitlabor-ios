@@ -1,0 +1,63 @@
+
+/* Class = "IBUILabel"; text = "Hello, Bernd."; ObjectID = "35z-ov-p9l"; */
+"35z-ov-p9l.text" = "Hallo, Bernd.";
+
+/* Class = "IBUILabel"; text = "-1,50 €"; ObjectID = "6UW-0k-OI3"; */
+"6UW-0k-OI3.text" = "-1,50 €";
+
+/* Class = "IBUILabel"; text = "Members"; ObjectID = "83C-6t-a7X"; */
+"83C-6t-a7X.text" = "Mitglieder*innen";
+
+/* Class = "IBUITabBarItem"; badgeValue = "5,34€"; ObjectID = "8Fu-tE-TbZ"; */
+"8Fu-tE-TbZ.badgeValue" = "5,34€";
+
+/* Class = "IBUITabBarItem"; title = "Fnordcredit"; ObjectID = "8Fu-tE-TbZ"; */
+"8Fu-tE-TbZ.title" = "Fnordcredit";
+
+/* Class = "IBUITabBarItem"; title = "Light Control"; ObjectID = "9Tg-t2-Wjs"; */
+"9Tg-t2-Wjs.title" = "Lichtsteuerung";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Fba-6H-yTJ"; */
+"Fba-6H-yTJ.text" = "Title";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Transactions"; ObjectID = "Go3-vX-TLh"; */
+"Go3-vX-TLh.headerTitle" = "Transaktionen";
+
+/* Class = "IBUILabel"; text = "Scan"; ObjectID = "HPG-7k-Byq"; */
+"HPG-7k-Byq.text" = "Scannen";
+
+/* Class = "IBUITabBarItem"; title = "Settings"; ObjectID = "MGn-HW-qQx"; */
+"MGn-HW-qQx.title" = "Einstellungen";
+
+/* Class = "IBUILabel"; text = "New transaction"; ObjectID = "Nnb-ra-2c1"; */
+"Nnb-ra-2c1.text" = "Neue Transaktion";
+
+/* Class = "IBUILabel"; text = "Temperature"; ObjectID = "TaU-fo-v9t"; */
+"TaU-fo-v9t.text" = "Temperatur";
+
+/* Class = "IBUILabel"; text = "Club-Mate"; ObjectID = "Thp-np-1pe"; */
+"Thp-np-1pe.text" = "Club-Mate";
+
+/* Class = "IBUINavigationItem"; title = "Lichtsteuerung"; ObjectID = "UGC-lW-fng"; */
+"UGC-lW-fng.title" = "Lichtsteuerung";
+
+/* Class = "IBUILabel"; text = "Account Balance"; ObjectID = "Uz9-u3-VIk"; */
+"Uz9-u3-VIk.text" = "Kontostand";
+
+/* Class = "IBUINavigationController"; title = "RaumZeitLabor"; ObjectID = "Vr5-fc-FbK"; */
+"Vr5-fc-FbK.title" = "RaumZeitLabor";
+
+/* Class = "IBUILabel"; text = "12,34 €"; ObjectID = "eTj-qa-bMi"; */
+"eTj-qa-bMi.text" = "12,34 €";
+
+/* Class = "IBUINavigationItem"; title = "Dashboard"; ObjectID = "ev9-nH-sjh"; */
+"ev9-nH-sjh.title" = "Dashboard";
+
+/* Class = "IBUINavigationItem"; title = "Settings"; ObjectID = "sUM-jM-Fa0"; */
+"sUM-jM-Fa0.title" = "Einstellungen";
+
+/* Class = "IBUITabBarItem"; title = "Dashboard"; ObjectID = "xZP-pJ-EsG"; */
+"xZP-pJ-EsG.title" = "Dashboard";
+
+/* Class = "IBUINavigationItem"; title = "Fnordcredit"; ObjectID = "yqb-cB-kJn"; */
+"yqb-cB-kJn.title" = "Fnordcredit";
