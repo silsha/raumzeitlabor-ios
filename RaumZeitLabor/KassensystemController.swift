@@ -11,9 +11,12 @@ import UIKit
 
 class KassensystemController : UITableViewController {
     
+    @IBOutlet weak var creditLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCredit()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -22,20 +25,25 @@ class KassensystemController : UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        getCredit();
+    }
+    
     func getCredit() {
-        var json = getJSON("http://cashdesk.rzl:8000/transactions/silsha")
-        
+        var json = JSON(url: "http://cashdesk.rzl:8000/users/all");
+        if json.type != "NSError"  {
+            for (k, user) in json {
+                if user["name"].toString() == "silsha" {
+                    creditLabel.text = user["credit"].toString() + " €";
+                    usernameLabel.text = "Hej, " + user["name"].toString();
+                    var tabs = self.tabBarController?.tabBar.items as NSArray!
+                    var tab = tabs.objectAtIndex(2) as UITabBarItem;
+                    tab.badgeValue = user["credit"].toString() + " €"
+                }
+            }
+        }
     }
+
     
-    
-    func getJSON(urlToRequest: String) -> NSData{
-        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
-    }
-    
-    func parseJSON(inputData: NSData) -> NSDictionary{
-        var error: NSError?
-        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-        
-        return boardsDictionary
-    }
 }

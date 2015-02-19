@@ -24,8 +24,6 @@ class LichtsteuerungController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getStatus()
-        getData()
-    
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -54,19 +52,23 @@ class LichtsteuerungController : UITableViewController {
     func getData() {
         devices = [:]
         let json = JSON(url:"http://infra.rzl:8083/fhem?cmd=jsonlist&XHR=1")
-        var i = 0;
-        for (k, v) in json["Results"] {
-            if(v["list"].asString == "PCA301"){
-                for (id, device) in v["devices"] {
-                    if(device["NAME"].toString() != "PCA301_07363D"){
-                        devices[i] = ["alias": device["ATTR"]["alias"].toString(),
-                                        "room": device["ATTR"]["room"].toString(),
-                                        "name": device["NAME"].toString(),
-                                        "state": device["STATE"].toString()];
-                        i++
+        if json.type != "NSError"  {
+            var i = 0;
+            for (k, v) in json["Results"] {
+                if(v["list"].asString == "PCA301"){
+                    for (id, device) in v["devices"] {
+                        if(device["NAME"].toString() != "PCA301_07363D"){
+                            devices[i] = ["alias": device["ATTR"]["alias"].toString(),
+                                "room": device["ATTR"]["room"].toString(),
+                                "name": device["NAME"].toString(),
+                                "state": device["STATE"].toString()];
+                            i++
+                        }
                     }
                 }
             }
+        }else{
+            
         }
         
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -96,14 +98,20 @@ class LichtsteuerungController : UITableViewController {
         return cell
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        getData();
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.tableView.cellForRowAtIndexPath(indexPath)?.selected = false;
         let urlToRequest = "http://infra.rzl:8083/fhem?cmd." + devices[indexPath.row]!["name"]! + "=set%20" + devices[indexPath.row]!["name"]! + "%20toggle"
-        NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
-        if devices[indexPath.row]!["state"]! == "on"{
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
-        }else{
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+        if (NSData(contentsOfURL: NSURL(string: urlToRequest)!)? != nil) {
+            if devices[indexPath.row]!["state"]! == "on"{
+                self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
+            }else{
+                self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+            }
         }
         
         let delay = 2.0 * Double(NSEC_PER_SEC)

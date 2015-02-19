@@ -65,12 +65,13 @@ extension JSON {
     public convenience init(nsurl:NSURL) {
         var enc:NSStringEncoding = NSUTF8StringEncoding
         var err:NSError?
-        let str =
+        var str = String(contentsOfURL: nsurl, encoding: NSUTF8StringEncoding, error: &err)
+        /*let str =
         String(NSString(
             contentsOfURL:nsurl, usedEncoding:&enc, error:&err
-            )!)
+            )!)*/
         if err != nil { self.init(err!) }
-        else { self.init(string:str) }
+        else { self.init(string:str!) }
     }
     /// fetch the JSON string from NSURL and parse it
     /// same as JSON(nsurl:NSURL)

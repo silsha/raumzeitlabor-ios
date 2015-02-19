@@ -55,7 +55,7 @@ class DashboardController : UITableViewController {
     
     func getData() {
         if var mitglieder: AnyObject = parseJSON(getJSON("https://xively.com/feeds/42055/datastreams/Mitglieder/graph.json"))["current_value"] as? NSString{
-            mitgliederLabel.text = mitglieder as String;
+            mitgliederLabel.text = mitglieder as? String;
         }
         
         if var kontostand: AnyObject = parseJSON(getJSON("https://xively.com/feeds/42055/datastreams/Kontostand/graph.json"))["current_value"] as? NSString{

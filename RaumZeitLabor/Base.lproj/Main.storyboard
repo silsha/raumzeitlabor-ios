@@ -7,8 +7,9 @@
         <!--Dashboard-->
         <scene sceneID="r2m-kn-Q9a">
             <objects>
-                <tableViewController id="F1G-en-jfu" customClass="DashboardController" customModule="RaumZeitLabor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="F1G-en-jfu" customClass="DashboardController" customModule="raumzeitlabor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bBM-uz-jrA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -145,8 +146,9 @@
         <!--Lichtsteuerung-->
         <scene sceneID="yCt-Zu-jJn">
             <objects>
-                <tableViewController id="Raz-zP-YnG" customClass="LichtsteuerungController" customModule="RaumZeitLabor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Raz-zP-YnG" customClass="LichtsteuerungController" customModule="raumzeitlabor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Lmm-gY-98S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -224,12 +226,13 @@
         <!--Fnordcredit-->
         <scene sceneID="usu-t8-Nqv">
             <objects>
-                <tableViewController id="hxb-s7-zy0" customClass="KassensystemController" customModule="RaumZeitLabor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hxb-s7-zy0" customClass="KassensystemController" customModule="raumzeitlabor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8H1-eC-9Rc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection id="uPf-Fi-BMl">
+                            <tableViewSection id="5Il-WJ-WIu">
                                 <cells>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="35z-ov-p9l" style="IBUITableViewCellStyleDefault" id="QMa-Hi-kIx">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -309,36 +312,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Transactions" id="Go3-vX-TLh">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Thp-np-1pe" detailTextLabel="6UW-0k-OI3" style="IBUITableViewCellStyleValue1" id="rGr-cf-bMy">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rGr-cf-bMy" id="6p7-Qa-NKp">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Club-Mate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Thp-np-1pe">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="-1,50 €" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6UW-0k-OI3">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.8980392157" green="0.3803921569" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="hxb-s7-zy0" id="FlB-Jd-7YA"/>
@@ -346,6 +319,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Fnordcredit" id="yqb-cB-kJn"/>
+                    <connections>
+                        <outlet property="creditLabel" destination="eTj-qa-bMi" id="jcg-Qt-s7E"/>
+                        <outlet property="usernameLabel" destination="35z-ov-p9l" id="k4p-yN-UwT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFr-LG-4C8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +332,7 @@
         <scene sceneID="Mlw-oL-A3l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HXn-B3-lDe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fnordcredit" image="third" badgeValue="5,34€" id="8Fu-tE-TbZ"/>
+                    <tabBarItem key="tabBarItem" title="Fnordcredit" image="third" id="8Fu-tE-TbZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vqn-gp-d8p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -375,10 +352,11 @@
             <objects>
                 <tableViewController id="d9g-Fn-oNK" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SCn-vH-xNn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p3y-Wa-JUp">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Settngs" id="p3y-Wa-JUp">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p3y-Wa-JUp" id="VYO-ki-b1M">
                                     <autoresizingMask key="autoresizingMask"/>
