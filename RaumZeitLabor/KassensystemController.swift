@@ -33,14 +33,25 @@ class KassensystemController : UITableViewController {
     func getCredit() {
         var json = JSON(url: "http://cashdesk.rzl:8000/users/all");
         if json.type != "NSError"  {
-            for (k, user) in json {
-                if user["name"].toString() == "silsha" {
-                    creditLabel.text = user["credit"].toString() + " €";
-                    usernameLabel.text = "Hej, " + user["name"].toString();
-                    var tabs = self.tabBarController?.tabBar.items as NSArray!
-                    var tab = tabs.objectAtIndex(2) as UITabBarItem;
-                    tab.badgeValue = user["credit"].toString() + " €"
+            
+            var userDefaults = NSUserDefaults.standardUserDefaults()
+            if let fnordcredituser: AnyObject = userDefaults.valueForKey("fnordcredituser") {
+            
+                for (k, user) in json {
+                    if user["name"].toString() == fnordcredituser as String {
+                        creditLabel.text = user["credit"].toString() + " €";
+                        usernameLabel.text = "Hej, " + user["name"].toString();
+                        var tabs = self.tabBarController?.tabBar.items as NSArray!
+                        var tab = tabs.objectAtIndex(2) as UITabBarItem;
+                        tab.badgeValue = user["credit"].toString() + " €"
+                    }
                 }
+            }else{
+                let myAlert = UIAlertView(title: "Please choose your user account",
+                    message: "Please choose your user account in settings",
+                    delegate: nil, cancelButtonTitle: "Okay")
+                myAlert.show()
+                self.tabBarController?.selectedIndex = 4;
             }
         }else{
             let myAlert = UIAlertView(title: "You are not in RaumZeitLabor",

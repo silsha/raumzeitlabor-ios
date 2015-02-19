@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46396F2E1A9659A800CE8BBB /* fnordcreditAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46396F2D1A9659A800CE8BBB /* fnordcreditAccountController.swift */; };
+		46396F301A965FB500CE8BBB /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46396F2F1A965FB400CE8BBB /* SettingsController.swift */; };
 		469BC97F1A93D51100BE8716 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BC97E1A93D51100BE8716 /* DashboardController.swift */; };
 		469BC9811A93FAFD00BE8716 /* KassensystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BC9801A93FAFD00BE8716 /* KassensystemController.swift */; };
 		469BC9831A940BFC00BE8716 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BC9821A940BFC00BE8716 /* json.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46396F2D1A9659A800CE8BBB /* fnordcreditAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fnordcreditAccountController.swift; sourceTree = "<group>"; };
+		46396F2F1A965FB400CE8BBB /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		469BC97E1A93D51100BE8716 /* DashboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		469BC9801A93FAFD00BE8716 /* KassensystemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KassensystemController.swift; sourceTree = "<group>"; };
 		469BC9821A940BFC00BE8716 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				46F321481A9101F500A5EF5C /* LaunchScreen.xib */,
 				46F3213B1A9101F500A5EF5C /* Supporting Files */,
 				469BC9821A940BFC00BE8716 /* json.swift */,
+				46396F2D1A9659A800CE8BBB /* fnordcreditAccountController.swift */,
+				46396F2F1A965FB400CE8BBB /* SettingsController.swift */,
 			);
 			path = RaumZeitLabor;
 			sourceTree = "<group>";
@@ -226,7 +232,9 @@
 				469BC97F1A93D51100BE8716 /* DashboardController.swift in Sources */,
 				469BC9811A93FAFD00BE8716 /* KassensystemController.swift in Sources */,
 				469BC9831A940BFC00BE8716 /* json.swift in Sources */,
+				46396F301A965FB500CE8BBB /* SettingsController.swift in Sources */,
 				46F321421A9101F500A5EF5C /* SecondViewController.swift in Sources */,
+				46396F2E1A9659A800CE8BBB /* fnordcreditAccountController.swift in Sources */,
 				46F3213E1A9101F500A5EF5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
