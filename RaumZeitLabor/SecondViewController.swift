@@ -68,7 +68,11 @@ class LichtsteuerungController : UITableViewController {
                 }
             }
         }else{
-            
+            let myAlert = UIAlertView(title: "You are not in RaumZeitLabor",
+                message: "Light control works only in the RaumZeitLabor network",
+                delegate: nil, cancelButtonTitle: "Cancel")
+            myAlert.show()
+            self.tabBarController?.selectedIndex = 0;
         }
         
             dispatch_async(dispatch_get_main_queue(), { () -> Void in

@@ -42,6 +42,12 @@ class KassensystemController : UITableViewController {
                     tab.badgeValue = user["credit"].toString() + " €"
                 }
             }
+        }else{
+            let myAlert = UIAlertView(title: "You are not in RaumZeitLabor",
+                message: "Fnordcredit works only in the RaumZeitLabor network",
+                delegate: nil, cancelButtonTitle: "Cancel")
+            myAlert.show()
+            self.tabBarController?.selectedIndex = 0;
         }
     }
 
