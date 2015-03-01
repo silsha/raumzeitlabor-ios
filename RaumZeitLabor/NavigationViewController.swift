@@ -22,7 +22,7 @@ class NavigationViewController : UITableViewController {
         if json.type != "NSError"  {
             if let status = json["status"].asString{
                 if status == "1" {
-                        navigationController?.navigationBar.barTintColor = UIColor(red: 0x0b/255, green: 0xd3/255, blue: 0x18/255, alpha: 1.0)
+                        navigationController?.navigationBar.barTintColor = UIColor(red: 0x4c/255, green: 0xd9/255, blue: 0x64/255, alpha: 1.0)
                 }
                 if status == "0" {
                     navigationController?.navigationBar.barTintColor = UIColor(red: 0xff/255, green: 0x2a/255, blue: 0x68/255, alpha: 1.0)
