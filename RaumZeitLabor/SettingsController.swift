@@ -51,4 +51,13 @@ class SettingsController : UITableViewController {
         return true;
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.cellForRowAtIndexPath(indexPath)?.selected = false;
+        if ((indexPath.section == 1 && indexPath.row == 0)) {
+            let url = NSURL(string: "https://fnordserver.eu");
+            if UIApplication.sharedApplication().canOpenURL(url!) {
+                UIApplication.sharedApplication().openURL(url!)
+            }
+        }
+    }
 }

@@ -14,21 +14,31 @@ class NavigationViewController : UITableViewController {
     @IBOutlet weak var LightControlCell: UITableViewCell!
     @IBOutlet weak var FnordcreditLabel: UILabel!
     @IBOutlet weak var LightControlLabel: UILabel!
+    @IBOutlet weak var statusCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.clipsToBounds = true
+        
         // Do any additional setup after loading the view, typically from a nib.
         let json = JSON(url:"http://s.rzl.so/api/full.json")
         if json.type != "NSError"  {
             if let status = json["status"].asString{
                 if status == "1" {
                         navigationController?.navigationBar.barTintColor = UIColor(red: 0x4c/255, green: 0xd9/255, blue: 0x64/255, alpha: 1.0)
+                    self.statusCell.backgroundColor = UIColor(red: 0x4c/255, green: 0xd9/255, blue: 0x64/255, alpha: 1.0)
+                    self.statusCell.textLabel?.text = "Open";
                 }
                 if status == "0" {
                     navigationController?.navigationBar.barTintColor = UIColor(red: 0xff/255, green: 0x2a/255, blue: 0x68/255, alpha: 1.0)
+                    self.statusCell.backgroundColor = UIColor(red: 0xff/255, green: 0x2a/255, blue: 0x68/255, alpha: 1.0)
+                    self.statusCell.textLabel?.text = "Closed";
                 }
                 if status == "?" {
                     navigationController?.navigationBar.barTintColor = UIColor(red: 0xff/255, green: 0x95/255, blue: 0x00/255, alpha: 1.0)
+                    self.statusCell.backgroundColor = UIColor(red: 0xff/255, green: 0x95/255, blue: 0x00/255, alpha: 1.0)
+                    self.statusCell.textLabel?.text = "Status unknown";
                 }
             }
         }
