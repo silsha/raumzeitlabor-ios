@@ -306,7 +306,7 @@
         <!--Fnordcredit-->
         <scene sceneID="usu-t8-Nqv">
             <objects>
-                <tableViewController id="hxb-s7-zy0" customClass="KassensystemController" customModule="raumzeitlabor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="fnordcreditView" id="hxb-s7-zy0" customClass="KassensystemController" customModule="raumzeitlabor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8H1-eC-9Rc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,7 +414,7 @@
         <!--Add Transaction-->
         <scene sceneID="Osc-k7-ugA">
             <objects>
-                <viewController id="dde-nO-kdM" sceneMemberID="viewController">
+                <viewController id="dde-nO-kdM" customClass="TransactionController" customModule="raumzeitlabor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eKm-Mv-G80"/>
                         <viewControllerLayoutGuide type="bottom" id="hZV-gz-8Gr"/>
@@ -423,7 +423,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="0,00" placeholder="0,00" textAlignment="right" minimumFontSize="21" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="n7u-l7-Eha">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" placeholder="0,00" textAlignment="right" minimumFontSize="21" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="n7u-l7-Eha">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -445,92 +445,103 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59Z-SA-9PD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eFI-hN-vDy">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.71963778409090917" green="0.3044695513630884" blue="0.11424273514779001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Subtract">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59Z-SA-9PD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.071499449781660382" green="0.59882023358585856" blue="0.039961070043848829" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="Bla-Vz-6hL"/>
+                                    <constraint firstAttribute="width" constant="200" id="ymd-nc-2OT"/>
                                 </constraints>
-                                <state key="normal" title="Add credit">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Bla-Vz-6hL"/>
+                                        <exclude reference="ymd-nc-2OT"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="Bla-Vz-6hL"/>
+                                        <include reference="ymd-nc-2OT"/>
                                     </mask>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFI-hN-vDy">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.8980392157" green="0.3803921569" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Remove credit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="59Z-SA-9PD" firstAttribute="top" secondItem="eFI-hN-vDy" secondAttribute="top" id="6xj-N6-GeE"/>
-                            <constraint firstItem="eFI-hN-vDy" firstAttribute="top" secondItem="n7u-l7-Eha" secondAttribute="bottom" id="R3F-WR-BFb"/>
-                            <constraint firstItem="hZV-gz-8Gr" firstAttribute="top" secondItem="59Z-SA-9PD" secondAttribute="bottom" constant="368" id="d4M-zc-SF3"/>
+                            <constraint firstItem="59Z-SA-9PD" firstAttribute="baseline" secondItem="eFI-hN-vDy" secondAttribute="firstBaseline" id="19C-gP-eX2"/>
+                            <constraint firstItem="eFI-hN-vDy" firstAttribute="bottom" secondItem="hZV-gz-8Gr" secondAttribute="top" id="6u9-lk-6Nu"/>
+                            <constraint firstItem="eFI-hN-vDy" firstAttribute="trailing" secondItem="n7u-l7-Eha" secondAttribute="trailing" id="7FP-iI-6Zi"/>
+                            <constraint firstItem="eFI-hN-vDy" firstAttribute="top" secondItem="n7u-l7-Eha" secondAttribute="bottom" id="OIU-tJ-LpQ"/>
+                            <constraint firstItem="eFI-hN-vDy" firstAttribute="baseline" secondItem="59Z-SA-9PD" secondAttribute="firstBaseline" id="cGn-Uk-TiX"/>
+                            <constraint firstItem="59Z-SA-9PD" firstAttribute="leading" secondItem="n7u-l7-Eha" secondAttribute="leading" id="cHU-EH-S5z"/>
                             <constraint firstItem="n7u-l7-Eha" firstAttribute="top" secondItem="eKm-Mv-G80" secondAttribute="bottom" id="gWS-d0-Hx8"/>
-                            <constraint firstItem="n7u-l7-Eha" firstAttribute="leading" secondItem="59Z-SA-9PD" secondAttribute="leading" id="iBB-F5-y2h"/>
-                            <constraint firstItem="eFI-hN-vDy" firstAttribute="trailing" secondItem="n7u-l7-Eha" secondAttribute="trailing" id="qwG-xo-C3f"/>
+                            <constraint firstItem="eFI-hN-vDy" firstAttribute="leading" secondItem="59Z-SA-9PD" secondAttribute="trailing" id="lQp-4b-JnN"/>
+                            <constraint firstItem="59Z-SA-9PD" firstAttribute="bottom" secondItem="hZV-gz-8Gr" secondAttribute="top" id="mf0-K4-HKr"/>
                             <constraint firstItem="n7u-l7-Eha" firstAttribute="leading" secondItem="umd-fo-FKd" secondAttribute="leading" id="ueb-mb-l7R"/>
-                            <constraint firstItem="59Z-SA-9PD" firstAttribute="baseline" secondItem="eFI-hN-vDy" secondAttribute="firstBaseline" id="vwS-rY-qRe"/>
-                            <constraint firstItem="eFI-hN-vDy" firstAttribute="baseline" secondItem="59Z-SA-9PD" secondAttribute="firstBaseline" id="w0Y-ow-eGO"/>
-                            <constraint firstItem="eFI-hN-vDy" firstAttribute="leading" secondItem="59Z-SA-9PD" secondAttribute="trailing" constant="27" id="x3s-m9-5Ck"/>
                             <constraint firstAttribute="trailing" secondItem="n7u-l7-Eha" secondAttribute="trailing" id="xdp-hN-Ymm"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="n7u-l7-Eha"/>
-                                <exclude reference="59Z-SA-9PD"/>
                                 <exclude reference="eFI-hN-vDy"/>
+                                <exclude reference="59Z-SA-9PD"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="d4M-zc-SF3"/>
                                 <exclude reference="gWS-d0-Hx8"/>
-                                <exclude reference="iBB-F5-y2h"/>
                                 <exclude reference="ueb-mb-l7R"/>
                                 <exclude reference="xdp-hN-Ymm"/>
-                                <exclude reference="6xj-N6-GeE"/>
-                                <exclude reference="vwS-rY-qRe"/>
-                                <exclude reference="R3F-WR-BFb"/>
-                                <exclude reference="qwG-xo-C3f"/>
-                                <exclude reference="w0Y-ow-eGO"/>
-                                <exclude reference="x3s-m9-5Ck"/>
+                                <exclude reference="19C-gP-eX2"/>
+                                <exclude reference="cHU-EH-S5z"/>
+                                <exclude reference="mf0-K4-HKr"/>
+                                <exclude reference="6u9-lk-6Nu"/>
+                                <exclude reference="7FP-iI-6Zi"/>
+                                <exclude reference="OIU-tJ-LpQ"/>
+                                <exclude reference="cGn-Uk-TiX"/>
+                                <exclude reference="lQp-4b-JnN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="n7u-l7-Eha"/>
-                                <include reference="59Z-SA-9PD"/>
                                 <include reference="eFI-hN-vDy"/>
+                                <include reference="59Z-SA-9PD"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="d4M-zc-SF3"/>
                                 <include reference="gWS-d0-Hx8"/>
-                                <include reference="iBB-F5-y2h"/>
                                 <include reference="ueb-mb-l7R"/>
                                 <include reference="xdp-hN-Ymm"/>
-                                <include reference="6xj-N6-GeE"/>
-                                <include reference="vwS-rY-qRe"/>
-                                <include reference="R3F-WR-BFb"/>
-                                <include reference="qwG-xo-C3f"/>
-                                <include reference="w0Y-ow-eGO"/>
-                                <include reference="x3s-m9-5Ck"/>
+                                <include reference="19C-gP-eX2"/>
+                                <include reference="cHU-EH-S5z"/>
+                                <include reference="mf0-K4-HKr"/>
+                                <include reference="6u9-lk-6Nu"/>
+                                <include reference="7FP-iI-6Zi"/>
+                                <include reference="OIU-tJ-LpQ"/>
+                                <include reference="cGn-Uk-TiX"/>
+                                <include reference="lQp-4b-JnN"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Add Transaction" id="df9-zr-BD1">
                         <barButtonItem key="backBarButtonItem" title="Close" id="J1n-Xh-FUQ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addCreditButton" destination="59Z-SA-9PD" id="HGp-mV-6Ij"/>
+                        <outlet property="removeCreditButton" destination="eFI-hN-vDy" id="VYO-3A-9T5"/>
+                        <outlet property="sumfield" destination="n7u-l7-Eha" id="4kb-4a-GW3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mt-P6-uuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
