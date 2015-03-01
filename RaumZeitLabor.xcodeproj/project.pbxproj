@@ -14,6 +14,8 @@
 		469BC9811A93FAFD00BE8716 /* KassensystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BC9801A93FAFD00BE8716 /* KassensystemController.swift */; };
 		469BC9831A940BFC00BE8716 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BC9821A940BFC00BE8716 /* json.swift */; };
 		46A85C511AA373630034F1E4 /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A85C501AA373630034F1E4 /* TransactionController.swift */; };
+		46A85C5B1AA38EF50034F1E4 /* RSBarcodes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 46A85C571AA38E640034F1E4 /* RSBarcodes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46A85C5D1AA39E1E0034F1E4 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A85C5C1AA39E1E0034F1E4 /* ScanController.swift */; };
 		46F3213E1A9101F500A5EF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3213D1A9101F500A5EF5C /* AppDelegate.swift */; };
 		46F321421A9101F500A5EF5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F321411A9101F500A5EF5C /* SecondViewController.swift */; };
 		46F321451A9101F500A5EF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F321431A9101F500A5EF5C /* Main.storyboard */; };
@@ -22,6 +24,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		46A85C561AA38E640034F1E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46A85C521AA38E630034F1E4 /* RSBarcodes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D08336371A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
+		46A85C581AA38EC20034F1E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46A85C521AA38E630034F1E4 /* RSBarcodes.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D08336361A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
 		46F321501A9101F500A5EF5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46F321301A9101F500A5EF5C /* Project object */;
@@ -30,6 +46,20 @@
 			remoteInfo = RaumZeitLabor;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46A85C5A1AA38ED50034F1E4 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46A85C5B1AA38EF50034F1E4 /* RSBarcodes.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		46396F2D1A9659A800CE8BBB /* fnordcreditAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fnordcreditAccountController.swift; sourceTree = "<group>"; };
@@ -40,6 +70,8 @@
 		469BC9821A940BFC00BE8716 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		469BC9841A9425CF00BE8716 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		46A85C501AA373630034F1E4 /* TransactionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
+		46A85C521AA38E630034F1E4 /* RSBarcodes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSBarcodes.xcodeproj; path = RSBarcodes_Swift/RSBarcodes.xcodeproj; sourceTree = SOURCE_ROOT; };
+		46A85C5C1AA39E1E0034F1E4 /* ScanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanController.swift; path = ../ScanController.swift; sourceTree = "<group>"; };
 		46F321381A9101F500A5EF5C /* raumzeitlabor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = raumzeitlabor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F3213C1A9101F500A5EF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F3213D1A9101F500A5EF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46A85C531AA38E630034F1E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46A85C571AA38E640034F1E4 /* RSBarcodes.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		46F3212F1A9101F500A5EF5C = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +133,7 @@
 				46F3213D1A9101F500A5EF5C /* AppDelegate.swift */,
 				469BC97E1A93D51100BE8716 /* DashboardController.swift */,
 				46F321411A9101F500A5EF5C /* SecondViewController.swift */,
+				46A85C5C1AA39E1E0034F1E4 /* ScanController.swift */,
 				469BC9801A93FAFD00BE8716 /* KassensystemController.swift */,
 				46F321431A9101F500A5EF5C /* Main.storyboard */,
 				46F321461A9101F500A5EF5C /* Images.xcassets */,
@@ -102,6 +143,7 @@
 				46396F2F1A965FB400CE8BBB /* SettingsController.swift */,
 				4675794C1AA25CC4000D827C /* NavigationViewController.swift */,
 				46A85C501AA373630034F1E4 /* TransactionController.swift */,
+				46A85C521AA38E630034F1E4 /* RSBarcodes.xcodeproj */,
 			);
 			path = RaumZeitLabor;
 			sourceTree = "<group>";
@@ -141,10 +183,12 @@
 				46F321341A9101F500A5EF5C /* Sources */,
 				46F321351A9101F500A5EF5C /* Frameworks */,
 				46F321361A9101F500A5EF5C /* Resources */,
+				46A85C5A1AA38ED50034F1E4 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46A85C591AA38EC20034F1E4 /* PBXTargetDependency */,
 			);
 			name = RaumZeitLabor;
 			productName = RaumZeitLabor;
@@ -199,6 +243,12 @@
 			mainGroup = 46F3212F1A9101F500A5EF5C;
 			productRefGroup = 46F321391A9101F500A5EF5C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 46A85C531AA38E630034F1E4 /* Products */;
+					ProjectRef = 46A85C521AA38E630034F1E4 /* RSBarcodes.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				46F321371A9101F500A5EF5C /* RaumZeitLabor */,
@@ -206,6 +256,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		46A85C571AA38E640034F1E4 /* RSBarcodes.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSBarcodes.framework;
+			remoteRef = 46A85C561AA38E640034F1E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		46F321361A9101F500A5EF5C /* Resources */ = {
@@ -233,6 +293,7 @@
 			files = (
 				4675794D1AA25CC4000D827C /* NavigationViewController.swift in Sources */,
 				469BC97F1A93D51100BE8716 /* DashboardController.swift in Sources */,
+				46A85C5D1AA39E1E0034F1E4 /* ScanController.swift in Sources */,
 				469BC9811A93FAFD00BE8716 /* KassensystemController.swift in Sources */,
 				469BC9831A940BFC00BE8716 /* json.swift in Sources */,
 				46396F301A965FB500CE8BBB /* SettingsController.swift in Sources */,
@@ -254,6 +315,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		46A85C591AA38EC20034F1E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSBarcodes;
+			targetProxy = 46A85C581AA38EC20034F1E4 /* PBXContainerItemProxy */;
+		};
 		46F321511A9101F500A5EF5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 46F321371A9101F500A5EF5C /* RaumZeitLabor */;

@@ -37,7 +37,6 @@ class fnordcreditAccountController : UITableViewController {
                 message: "fnordcredit works only in the RaumZeitLabor network",
                 delegate: nil, cancelButtonTitle: "Cancel")
             myAlert.show()
-            self.tabBarController?.selectedIndex = 0;
         }
         users.sort() {$0.0 < $1.0};
     }

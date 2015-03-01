@@ -1,0 +1,3 @@
+[submodule "RSBarcodes_Swift"]
+	path = RSBarcodes_Swift
+	url = https://github.com/yeahdongcn/RSBarcodes_Swift.git

@@ -185,7 +185,7 @@
                         <sections>
                             <tableViewSection id="tmM-Nr-nn4">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="KSV-bI-Skx" style="IBUITableViewCellStyleDefault" id="8it-N5-obK">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="KSV-bI-Skx" style="IBUITableViewCellStyleDefault" id="8it-N5-obK">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8it-N5-obK" id="ne9-LK-gnG">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -369,6 +369,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SDb-Eb-gTn" kind="show" id="4Mj-mY-D5F"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Nnb-ra-2c1" imageView="qmv-a5-Ufb" style="IBUITableViewCellStyleDefault" id="g8c-WA-R70">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -545,7 +548,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mt-P6-uuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2619" y="824"/>
+            <point key="canvasLocation" x="3048" y="72"/>
+        </scene>
+        <!--Scan Controller-->
+        <scene sceneID="Gk7-bY-Zig">
+            <objects>
+                <viewController id="SDb-Eb-gTn" customClass="ScanController" customModule="raumzeitlabor" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgL-Vg-vBf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hau-ws-cLs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vY0-Zg-DKW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaB-zi-IrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3054" y="788"/>
         </scene>
         <!--Settings-->
         <scene sceneID="t3g-62-11O">
