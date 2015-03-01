@@ -32,4 +32,23 @@ class SettingsController : UITableViewController {
             fnordcredituser.text = user as? String;
         }
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if (identifier == "settingsaccountsegue") {
+            let json = JSON(url:"http://infra.rzl:8083/fhem?cmd=jsonlist&XHR=1")
+            if json.type != "NSError"  {
+                return true;
+            }else{
+                let myAlert = UIAlertView(title: "You are not in RaumZeitLabor",
+                    message: "fnordcredit works only in the RaumZeitLabor network",
+                    delegate: nil, cancelButtonTitle: "Cancel")
+                myAlert.show();
+                
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
 }

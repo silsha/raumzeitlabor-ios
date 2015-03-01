@@ -23,7 +23,6 @@ class LichtsteuerungController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getStatus()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -32,21 +31,6 @@ class LichtsteuerungController : UITableViewController {
         
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         // Dispose of any resources that can be recreated.
-    }
-    
-    func getStatus() {
-        var json = getJSON("https://status.raumzeitlabor.de/api/full.json")
-        if var status: AnyObject? = parseJSON(json)["details"]?["tuer"] {
-            if status! as NSObject == "1" {
-                self.navigationController?.navigationBar.barTintColor = UIColor(red: 38/255, green: 166/255, blue: 91/255, alpha: 1);
-            }
-            if status! as NSObject == "0" {
-                self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
-            }
-            if status! as NSObject == "?" {
-                self.navigationController?.navigationBar.barTintColor = UIColor.orangeColor()
-            }
-        }
     }
     
     func getData() {
@@ -71,8 +55,7 @@ class LichtsteuerungController : UITableViewController {
             let myAlert = UIAlertView(title: "You are not in RaumZeitLabor",
                 message: "Light control works only in the RaumZeitLabor network",
                 delegate: nil, cancelButtonTitle: "Cancel")
-            myAlert.show()
-            self.tabBarController?.selectedIndex = 0;
+            myAlert.show();
         }
         
             dispatch_async(dispatch_get_main_queue(), { () -> Void in

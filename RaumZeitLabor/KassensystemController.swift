@@ -41,9 +41,6 @@ class KassensystemController : UITableViewController {
                     if user["name"].toString() == fnordcredituser as String {
                         creditLabel.text = user["credit"].toString() + " €";
                         usernameLabel.text = "Hej, " + user["name"].toString();
-                        var tabs = self.tabBarController?.tabBar.items as NSArray!
-                        var tab = tabs.objectAtIndex(2) as UITabBarItem;
-                        tab.badgeValue = user["credit"].toString() + " €"
                     }
                 }
             }else{

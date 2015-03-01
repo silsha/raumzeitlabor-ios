@@ -25,8 +25,7 @@ class DashboardController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getStatus()
-        getData()
+        self.getData();
         
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
@@ -38,32 +37,26 @@ class DashboardController : UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getStatus() {
-        var json = getJSON("https://status.raumzeitlabor.de/api/full.json")
-        if var status: AnyObject? = parseJSON(json)["details"]?["tuer"] {
-            if status! as NSObject == "1" {
-                self.navigationController?.navigationBar.barTintColor = UIColor(red: 38/255, green: 166/255, blue: 91/255, alpha: 1);
-            }
-            if status! as NSObject == "0" {
-                self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
-            }
-            if status! as NSObject == "?" {
-                self.navigationController?.navigationBar.barTintColor = UIColor.orangeColor()
-            }
-        }
-    }
-    
     func getData() {
-        if var mitglieder: AnyObject = parseJSON(getJSON("https://xively.com/feeds/42055/datastreams/Mitglieder/graph.json"))["current_value"] as? NSString{
-            mitgliederLabel.text = mitglieder as? String;
-        }
-        
-        if var kontostand: AnyObject = parseJSON(getJSON("https://xively.com/feeds/42055/datastreams/Kontostand/graph.json"))["current_value"] as? NSString{
-            kontostandLabel.text = kontostand as String + " €";
-        }
-        
-        if var temperatur: AnyObject = parseJSON(getJSON("https://xively.com/feeds/42055/datastreams/Temperatur_Raum_Tafel/graph.json"))["current_value"] as? NSString{
-            temperaturLabel.text = temperatur as String + "°C";
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            if var mitglieder: AnyObject = self.parseJSON(self.getJSON("https://xively.com/feeds/42055/datastreams/Mitglieder/graph.json"))["current_value"] as? NSString{
+                NSOperationQueue.mainQueue().addOperationWithBlock(){
+                    self.mitgliederLabel.text = mitglieder as? String;
+                }
+                
+            }
+            
+            if var kontostand: AnyObject = self.parseJSON(self.getJSON("https://xively.com/feeds/42055/datastreams/Kontostand/graph.json"))["current_value"] as? NSString{
+                NSOperationQueue.mainQueue().addOperationWithBlock(){
+                    self.kontostandLabel.text = kontostand as String + " €";
+                }
+            }
+            
+            if var temperatur: AnyObject = self.parseJSON(self.getJSON("https://xively.com/feeds/42055/datastreams/Temperatur_Raum_Tafel/graph.json"))["current_value"] as? NSString{
+                NSOperationQueue.mainQueue().addOperationWithBlock(){
+                    self.temperaturLabel.text = temperatur as String + "°C";
+                }
+            }
         }
         
     }
