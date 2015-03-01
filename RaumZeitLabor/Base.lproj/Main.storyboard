@@ -606,7 +606,21 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="About" id="R9k-rh-cHU">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Settings" rowHeight="90" id="Zwt-O2-daL">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="github" selectionStyle="default" indentationWidth="10" reuseIdentifier="github" textLabel="H2h-ya-Yx3" style="IBUITableViewCellStyleDefault" id="INL-35-y1d">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="githubcell" tableViewCell="INL-35-y1d" id="VJ1-1R-nPs">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Improvement suggestions?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H2h-ya-Yx3">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="logo" selectionStyle="default" indentationWidth="10" reuseIdentifier="Logo" rowHeight="90" id="Zwt-O2-daL">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="fnordserverlogocell" tableViewCell="Zwt-O2-daL" id="JAd-jj-arg">
                                             <autoresizingMask key="autoresizingMask"/>
