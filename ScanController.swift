@@ -8,11 +8,15 @@
 
 import UIKit
 import RSBarcodes
+import AVFoundation
 
 class ScanController: RSCodeReaderViewController {
     var i = 0;
     override func viewDidLoad() {
         super.viewDidLoad()
+        let types = NSMutableArray(array: ["org.gs1.EAN-13", "org.gs1.EAN-8"])
+        types.removeObject(AVMetadataObjectTypeQRCode)
+        self.output.metadataObjectTypes = NSArray(array: types)
         
         self.focusMarkLayer.strokeColor = UIColor.redColor().CGColor
         
