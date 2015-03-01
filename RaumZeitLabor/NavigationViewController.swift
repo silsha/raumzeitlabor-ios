@@ -44,6 +44,9 @@ class NavigationViewController : UITableViewController {
         if json.type == "NSError"  {
             LightControlLabel.enabled = false;
             FnordcreditLabel.enabled = false;
+        }else{
+            LightControlLabel.enabled = true;
+            FnordcreditLabel.enabled = true;
         }
     }
     
