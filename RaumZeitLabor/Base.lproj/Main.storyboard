@@ -599,7 +599,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Xvu-dU-v5I" kind="show" id="Plc-f6-JI0"/>
+                                            <segue destination="Xvu-dU-v5I" kind="show" identifier="settingsaccountsegue" id="Plc-f6-JI0"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
