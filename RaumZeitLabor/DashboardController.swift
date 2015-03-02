@@ -13,8 +13,6 @@ class DashboardController : UITableViewController {
     
     func refresh(sender:AnyObject)
     {
-        getData()
-        
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
@@ -23,7 +21,6 @@ class DashboardController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getData();
         
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
@@ -46,32 +43,6 @@ class DashboardController : UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func getData() {
-        //                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-        //                    var json = JSON(url:"https://xively.com/feeds/42055/datastreams/Mitglieder/graph.json")
-        //                    if json.type != "NSError"  {
-        //                        NSOperationQueue.mainQueue().addOperationWithBlock(){
-        //                            self.tableView.dequeueReusableCellWithIdentifier("membersCell")?.textLabel?.text = json["current_value"].toString
-        //                            return
-        //                        }
-        //                    }
-        //                    json = JSON(url:"https://xively.com/feeds/42055/datastreams/Kontostand/graph.json")
-        //                    if json.type != "NSError"  {
-        //                        NSOperationQueue.mainQueue().addOperationWithBlock(){
-        //                            self.DashboardTable.mitgliederLabel.text = mitglieder as? String;
-        //                        }
-        //                    }
-        //                    json = JSON(url:"https://xively.com/feeds/42055/datastreams/Temperatur_Raum_Tafel/graph.json")
-        //                    if json.type != "NSError"  {
-        //                        NSOperationQueue.mainQueue().addOperationWithBlock(){
-        //                            self.DashboardTable.mitgliederLabel.text = mitglieder as? String;
-        //                        }
-        //                    }
-        //
-        //                }
-        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
