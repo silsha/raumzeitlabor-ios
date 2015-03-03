@@ -31,9 +31,8 @@ class EventsController : UITableViewController {
         var cell = UITableViewCell();
         cell = tableView.dequeueReusableCellWithIdentifier("eventsCell", forIndexPath: indexPath) as UITableViewCell
         var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-DD'T'HH:mm:ss'Z'"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
         var date = dateFormatter.dateFromString(events[row]["start"]!)
-        println(date)
         dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .FullStyle
         
