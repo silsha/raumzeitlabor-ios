@@ -11,6 +11,10 @@ import RSBarcodes
 import AVFoundation
 
 class ScanController: RSCodeReaderViewController {
+    
+    @IBAction func LightButton(sender: AnyObject) {
+        toggleFlash()
+    }
     var i = 0;
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +102,19 @@ class ScanController: RSCodeReaderViewController {
             
             task.resume()
             
+        }
+    }
+    
+    func toggleFlash() {
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        if (device.hasTorch) {
+            device.lockForConfiguration(nil)
+            if (device.torchMode == AVCaptureTorchMode.On) {
+                device.torchMode = AVCaptureTorchMode.Off
+            } else {
+                device.setTorchModeOnWithLevel(1.0, error: nil)
+            }
+            device.unlockForConfiguration()
         }
     }
 }
