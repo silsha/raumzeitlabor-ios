@@ -31,6 +31,7 @@ class ScanController: RSCodeReaderViewController {
         }
         
         self.barcodesHandler = { barcodes in
+            var bought: Bool = false
             for barcode in barcodes {
                 if(self.i == 0){
                     self.i++
@@ -40,6 +41,17 @@ class ScanController: RSCodeReaderViewController {
                         for (k,v) in json {
                             if k as NSString == barcode.stringValue {
                                 self.buyItem(v["price"].asString!)
+                                bought = true
+                            }
+                        }
+                        if bought == false {
+                            let myAlert = UIAlertView(title: "Product not found",
+                                message: "Please mail EAN-Code to hallo@silsha.me",
+                                delegate: nil, cancelButtonTitle: "Cancel")
+                            dispatch_async(dispatch_get_main_queue()) {
+                                myAlert.show();
+                                self.navigationController?.popViewControllerAnimated(true)
+                                return
                             }
                         }
                     }

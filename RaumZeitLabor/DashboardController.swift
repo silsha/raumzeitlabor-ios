@@ -96,7 +96,7 @@ class DashboardController : UITableViewController {
                 var json = JSON(url:"https://xively.com/feeds/42055/datastreams/Kontostand/graph.json")
                 if json.type != "NSError" {
                     NSOperationQueue.mainQueue().addOperationWithBlock(){
-                        cell.textLabel?.text = json["current_value"].toString();
+                        cell.textLabel?.text = json["current_value"].toString() + " €";
                         return
                     }
                 }
@@ -108,7 +108,7 @@ class DashboardController : UITableViewController {
                 var json = JSON(url:"https://xively.com/feeds/42055/datastreams/Temperatur_Raum_Tafel/graph.json")
                 if json.type != "NSError" {
                     NSOperationQueue.mainQueue().addOperationWithBlock(){
-                        cell.textLabel?.text = json["current_value"].toString();
+                        cell.textLabel?.text = json["current_value"].toString() + "°C";
                         return
                     }
                 }

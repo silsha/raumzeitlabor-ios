@@ -25,6 +25,7 @@ class KassensystemController : UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        transactions = []
         getCredit();
     }
     
@@ -123,7 +124,7 @@ class KassensystemController : UITableViewController {
                 return CGFloat(50)
             }
         }
-        return CGFloat(60)
+        return CGFloat(40)
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
