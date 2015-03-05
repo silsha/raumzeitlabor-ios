@@ -17,6 +17,7 @@
 		46A85C511AA373630034F1E4 /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A85C501AA373630034F1E4 /* TransactionController.swift */; };
 		46A85C5B1AA38EF50034F1E4 /* RSBarcodes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 46A85C571AA38E640034F1E4 /* RSBarcodes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		46A85C5D1AA39E1E0034F1E4 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A85C5C1AA39E1E0034F1E4 /* ScanController.swift */; };
+		46EF25DB1AA8FD2400DDA182 /* EventDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF25DA1AA8FD2400DDA182 /* EventDetailController.swift */; };
 		46F3213E1A9101F500A5EF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3213D1A9101F500A5EF5C /* AppDelegate.swift */; };
 		46F321421A9101F500A5EF5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F321411A9101F500A5EF5C /* SecondViewController.swift */; };
 		46F321451A9101F500A5EF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F321431A9101F500A5EF5C /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		46A85C501AA373630034F1E4 /* TransactionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
 		46A85C521AA38E630034F1E4 /* RSBarcodes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSBarcodes.xcodeproj; path = RSBarcodes_Swift/RSBarcodes.xcodeproj; sourceTree = SOURCE_ROOT; };
 		46A85C5C1AA39E1E0034F1E4 /* ScanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanController.swift; path = ../ScanController.swift; sourceTree = "<group>"; };
+		46EF25DA1AA8FD2400DDA182 /* EventDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailController.swift; sourceTree = "<group>"; };
 		46F321381A9101F500A5EF5C /* raumzeitlabor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = raumzeitlabor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F3213C1A9101F500A5EF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F3213D1A9101F500A5EF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				469BC9801A93FAFD00BE8716 /* KassensystemController.swift */,
 				46F321431A9101F500A5EF5C /* Main.storyboard */,
 				46565DBB1AA3E106004CFD2C /* EventsController.swift */,
+				46EF25DA1AA8FD2400DDA182 /* EventDetailController.swift */,
 				46F321461A9101F500A5EF5C /* Images.xcassets */,
 				46F3213B1A9101F500A5EF5C /* Supporting Files */,
 				469BC9821A940BFC00BE8716 /* json.swift */,
@@ -297,6 +300,7 @@
 				4675794D1AA25CC4000D827C /* NavigationViewController.swift in Sources */,
 				469BC97F1A93D51100BE8716 /* DashboardController.swift in Sources */,
 				46A85C5D1AA39E1E0034F1E4 /* ScanController.swift in Sources */,
+				46EF25DB1AA8FD2400DDA182 /* EventDetailController.swift in Sources */,
 				469BC9811A93FAFD00BE8716 /* KassensystemController.swift in Sources */,
 				469BC9831A940BFC00BE8716 /* json.swift in Sources */,
 				46565DBC1AA3E106004CFD2C /* EventsController.swift in Sources */,

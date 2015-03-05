@@ -70,14 +70,16 @@ class KassensystemController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var userDefaults = NSUserDefaults.standardUserDefaults()
         var cell = UITableViewCell()
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 cell = tableView.dequeueReusableCellWithIdentifier("nameCell", forIndexPath: indexPath) as UITableViewCell
-                (cell.viewWithTag(10) as UILabel).text = "Hej, silsha"
+                if let username = userDefaults.valueForKey("fnordcredituser") as? String {
+                    (cell.viewWithTag(10) as UILabel).text = "Hej, " + username
+                }
             }
             if indexPath.row == 1 {
-                var userDefaults = NSUserDefaults.standardUserDefaults()
                 cell = self.tableView.dequeueReusableCellWithIdentifier("balanceCell") as UITableViewCell
                 if let credit = userDefaults.valueForKey("fnordcreditcredit") as? String {
                     (cell.viewWithTag(14) as UILabel).text = credit + " €"

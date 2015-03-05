@@ -79,4 +79,20 @@ class EventsController : UITableViewController {
             
         }
     }
+    override func viewWillAppear(animated: Bool) {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "eventDetailSegue") {
+            let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
+            let detailsVC = segue.destinationViewController as EventDetailController
+            detailsVC.eventTitle = events[indexPath.row]["title"]!
+            detailsVC.eventDate = events[indexPath.row]["start"]!
+            detailsVC.eventDesc = events[indexPath.row]["description"]!
+        }
+    }
 }
