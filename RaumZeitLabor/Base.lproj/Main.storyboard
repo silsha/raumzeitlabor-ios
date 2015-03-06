@@ -881,15 +881,15 @@
                                             <exclude reference="QJi-hK-fW1"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="0fB-5v-PON"/>
-                                            <exclude reference="725-Lv-tkN"/>
-                                            <exclude reference="lGD-ys-ZhR"/>
-                                            <exclude reference="Mnu-UO-Gfp"/>
-                                            <exclude reference="O2Z-2v-03y"/>
-                                            <exclude reference="uWx-oB-Qdb"/>
                                             <exclude reference="B5G-ku-EPO"/>
                                             <exclude reference="Hub-ol-uEc"/>
                                             <exclude reference="tK0-cY-g4E"/>
+                                            <exclude reference="Mnu-UO-Gfp"/>
+                                            <exclude reference="O2Z-2v-03y"/>
+                                            <exclude reference="uWx-oB-Qdb"/>
+                                            <exclude reference="0fB-5v-PON"/>
+                                            <exclude reference="725-Lv-tkN"/>
+                                            <exclude reference="lGD-ys-ZhR"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -899,15 +899,15 @@
                                             <include reference="QJi-hK-fW1"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="0fB-5v-PON"/>
-                                            <include reference="725-Lv-tkN"/>
-                                            <include reference="lGD-ys-ZhR"/>
-                                            <include reference="Mnu-UO-Gfp"/>
-                                            <include reference="O2Z-2v-03y"/>
-                                            <include reference="uWx-oB-Qdb"/>
                                             <include reference="B5G-ku-EPO"/>
                                             <include reference="Hub-ol-uEc"/>
                                             <include reference="tK0-cY-g4E"/>
+                                            <include reference="Mnu-UO-Gfp"/>
+                                            <include reference="O2Z-2v-03y"/>
+                                            <include reference="uWx-oB-Qdb"/>
+                                            <include reference="0fB-5v-PON"/>
+                                            <include reference="725-Lv-tkN"/>
+                                            <include reference="lGD-ys-ZhR"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -932,12 +932,13 @@
             <objects>
                 <tableViewController id="OoD-yz-EOn" customClass="EventDetailController" customModule="raumzeitlabor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="i5d-qm-wSn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="bn0-4G-iya">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Ao2-eZ-0xS" style="IBUITableViewCellStyleDefault" id="2lO-3d-pnz">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Ao2-eZ-0xS" style="IBUITableViewCellStyleDefault" id="2lO-3d-pnz">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2lO-3d-pnz" id="eg5-ZA-aJb">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -954,7 +955,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="RGP-RQ-R66" style="IBUITableViewCellStyleDefault" id="8Sa-Tc-cqU">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="RGP-RQ-R66" style="IBUITableViewCellStyleDefault" id="8Sa-Tc-cqU">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Sa-Tc-cqU" id="PpT-iB-irM">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -971,7 +972,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fAx-An-ssG" style="IBUITableViewCellStyleDefault" id="nIm-eL-6p0">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fAx-An-ssG" style="IBUITableViewCellStyleDefault" id="nIm-eL-6p0">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nIm-eL-6p0" id="tHY-CP-J4O">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -980,6 +981,23 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="saveEvent" textLabel="ZZr-3t-O3c" style="IBUITableViewCellStyleDefault" id="F3q-JI-f5e">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F3q-JI-f5e" id="FpV-cK-tLU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Save Event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZZr-3t-O3c">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact">
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>

@@ -15,7 +15,9 @@ class SettingsController : UITableViewController {
         super.viewDidLoad()
         var userDefaults = NSUserDefaults.standardUserDefaults()
         if let user: AnyObject = userDefaults.valueForKey("fnordcredituser") {
-            fnordcredituser.text = user as? String;
+            dispatch_async(dispatch_get_main_queue()) {
+                self.fnordcredituser.text = user as? String;
+            }
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -29,7 +31,9 @@ class SettingsController : UITableViewController {
         super.viewWillAppear(animated)
         var userDefaults = NSUserDefaults.standardUserDefaults()
         if let user: AnyObject = userDefaults.valueForKey("fnordcredituser") {
-            fnordcredituser.text = user as? String;
+            dispatch_async(dispatch_get_main_queue()) {
+                self.fnordcredituser.text = user as? String;
+            }
         }
     }
     

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import EventKit
 
 class EventDetailController : UITableViewController {
     
@@ -38,6 +39,35 @@ class EventDetailController : UITableViewController {
         nameCell.textLabel?.text = eventTitle
         dateCell.textLabel?.text = dateFormatter.stringFromDate(date!)
         descriptionCell.textLabel?.text = eventDesc
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(indexPath.row == 3){
+            let eventStore = EKEventStore()
+            eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: {
+                granted, error in
+                if granted {
+                    var event:EKEvent = EKEvent(eventStore: eventStore)
+                    var dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+                    var date = dateFormatter.dateFromString(self.eventDate)
+                    
+                    event.title = self.eventTitle
+                    event.startDate = date
+                    event.endDate = date?.dateByAddingTimeInterval(7200)
+                    event.calendar = eventStore.defaultCalendarForNewEvents
+                    event.notes = self.eventDesc
+                    eventStore.saveEvent(event, span: EKSpanThisEvent, error: nil)
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.cellForRowAtIndexPath(indexPath)?.selected = false;
+                        let myAlert = UIAlertView(title: "Saved",
+                            message: "Saved Event in your calendar",
+                            delegate: nil, cancelButtonTitle: "Thanks!")
+                        myAlert.show();
+                    }
+                }
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {
