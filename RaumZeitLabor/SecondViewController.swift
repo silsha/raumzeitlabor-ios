@@ -52,8 +52,8 @@ class LichtsteuerungController : UITableViewController {
                 }
             }
         }else{
-            let myAlert = UIAlertView(title: "You are not in RaumZeitLabor",
-                message: "Light control works only in the RaumZeitLabor network",
+            let myAlert = UIAlertView(title: "No connectivity",
+                message: "Light control can only be used when connected to the RaumZeitLabor WiFi",
                 delegate: nil, cancelButtonTitle: "Cancel")
             myAlert.show();
         }
