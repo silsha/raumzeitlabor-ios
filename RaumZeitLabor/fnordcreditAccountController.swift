@@ -33,8 +33,8 @@ class fnordcreditAccountController : UITableViewController {
                 i++;
             }
         }else{
-            let myAlert = UIAlertView(title: "You are not in RaumZeitLabor",
-                message: "fnordcredit works only in the RaumZeitLabor network",
+            let myAlert = UIAlertView(title: "No connectivity",
+                message: "fnordcredit can only be used when connected to the RaumZeitLabor WiFi",
                 delegate: nil, cancelButtonTitle: "Cancel")
             myAlert.show()
         }

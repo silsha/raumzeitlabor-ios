@@ -60,8 +60,8 @@ class EventDetailController : UITableViewController {
                     eventStore.saveEvent(event, span: EKSpanThisEvent, error: nil)
                     dispatch_async(dispatch_get_main_queue()) {
                         self.tableView.cellForRowAtIndexPath(indexPath)?.selected = false;
-                        let myAlert = UIAlertView(title: "Saved",
-                            message: "Saved Event in your calendar",
+                        let myAlert = UIAlertView(title: "Saved event",
+                            message: "The event has been added to your calendar",
                             delegate: nil, cancelButtonTitle: "Thanks!")
                         myAlert.show();
                     }

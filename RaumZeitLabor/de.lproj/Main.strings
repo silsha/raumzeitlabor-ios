@@ -6,7 +6,7 @@
 "6UW-0k-OI3.text" = "-1,50 €";
 
 /* Class = "IBUILabel"; text = "Members"; ObjectID = "83C-6t-a7X"; */
-"83C-6t-a7X.text" = "Mitglieder*innen";
+"83C-6t-a7X.text" = "Mitglieder";
 
 /* Class = "IBUITabBarItem"; badgeValue = "5,34€"; ObjectID = "8Fu-tE-TbZ"; */
 "8Fu-tE-TbZ.badgeValue" = "5,34€";
